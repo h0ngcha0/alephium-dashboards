@@ -16,8 +16,8 @@
   "editable": true,
   "gnetId": 14359,
   "graphTooltip": 1,
-  "id": 11,
-  "iteration": 1621763485181,
+  "id": 10,
+  "iteration": 1621923378529,
   "links": [],
   "panels": [
     {
@@ -46,7 +46,7 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 3,
+        "w": 5,
         "x": 0,
         "y": 0
       },
@@ -150,7 +150,7 @@
       "gridPos": {
         "h": 4,
         "w": 4,
-        "x": 3,
+        "x": 5,
         "y": 0
       },
       "id": 14,
@@ -241,7 +241,7 @@
       "gridPos": {
         "h": 4,
         "w": 5,
-        "x": 7,
+        "x": 9,
         "y": 0
       },
       "id": 15,
@@ -331,8 +331,8 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 12,
-        "x": 12,
+        "w": 10,
+        "x": 14,
         "y": 0
       },
       "id": 19,
@@ -396,13 +396,262 @@
       "valueName": "current"
     },
     {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "format": "percentunit",
+      "gauge": {
+        "maxValue": 1,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 4
+      },
+      "id": 31,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "scopedVars": {
+        "service": {
+          "selected": true,
+          "text": "alephium",
+          "value": "alephium"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "sum(rate(process_cpu_seconds_total{app=\"alephium\"}[1m]))",
+          "format": "time_series",
+          "groupBy": [],
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "measurement": "process_cpu_usage",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "gauge"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "service",
+              "operator": "=~",
+              "value": "/^$service$/"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0.8,0.9",
+      "title": "Current CPU Usage",
+      "type": "singlestat",
+      "valueFontSize": "70%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {
+        "process_cpu_usage": "#badff4",
+        "process_cpu_usage ": "#badff4",
+        "system_cpu_usage": "#1f78c1",
+        "system_cpu_usage ": "#1f78c1"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "fill": 2,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 4
+      },
+      "hiddenSeries": false,
+      "id": 33,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.2.1",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "scopedVars": {
+        "service": {
+          "selected": true,
+          "text": "alephium",
+          "value": "alephium"
+        }
+      },
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(rate(process_cpu_seconds_total{app=\"alephium\"}[1m]))",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "process_cpu_usage",
+          "query": "from(bucket: \"telegraf\")\n|> range($range)\n|> filter(fn: (r) =>\n  r._measurement == \"process_cpu_usage\" AND\n  r.service == \"$service\" AND\n  r._field == \"gauge\")\n|> keep(columns: [\"_value\", \"_time\", \"_measurement\"])",
+          "refId": "A",
+          "resultFormat": "time_series"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "CPU Usage",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "percentunit",
+          "label": null,
+          "logBase": 1,
+          "max": "1.05",
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
       "collapsed": false,
       "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 4
+        "y": 12
       },
       "id": 29,
       "panels": [],
@@ -428,7 +677,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 5
+        "y": 13
       },
       "hiddenSeries": false,
       "id": 5,
@@ -532,7 +781,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 5
+        "y": 13
       },
       "hiddenSeries": false,
       "id": 6,
@@ -636,7 +885,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 14
+        "y": 22
       },
       "hiddenSeries": false,
       "id": 8,
@@ -751,7 +1000,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 14
+        "y": 22
       },
       "hiddenSeries": false,
       "id": 4,
@@ -863,7 +1112,7 @@
         "h": 9,
         "w": 8,
         "x": 0,
-        "y": 23
+        "y": 31
       },
       "hiddenSeries": false,
       "id": 2,
@@ -994,7 +1243,7 @@
         "h": 9,
         "w": 8,
         "x": 8,
-        "y": 23
+        "y": 31
       },
       "hiddenSeries": false,
       "id": 22,
@@ -1124,7 +1373,7 @@
         "h": 9,
         "w": 8,
         "x": 16,
-        "y": 23
+        "y": 31
       },
       "hiddenSeries": false,
       "id": 23,
@@ -1242,7 +1491,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 32
+        "y": 40
       },
       "id": 27,
       "panels": [],
@@ -1267,7 +1516,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 33
+        "y": 41
       },
       "hiddenSeries": false,
       "id": 25,
@@ -1404,7 +1653,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 33
+        "y": 41
       },
       "hiddenSeries": false,
       "id": 3,
@@ -1568,5 +1817,5 @@
   "timezone": "",
   "title": "JVM Overview",
   "uid": "ME6diT3Mk",
-  "version": 1
+  "version": 3
 }

@@ -15,8 +15,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 10,
-  "iteration": 1622009993585,
+  "id": 11,
+  "iteration": 1622060196294,
   "links": [],
   "panels": [
     {
@@ -297,7 +297,7 @@
         {
           "expr": "sum by (group_index, chain_index)(alephium_mempool_shared_pool_transactions_total{app=\"alephium\"})",
           "interval": "",
-          "legendFormat": "",
+          "legendFormat": "group {{group_index}}, chain {{chain_index}}",
           "refId": "A"
         }
       ],
@@ -322,6 +322,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:38",
+          "decimals": 0,
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -353,7 +354,8 @@
       "description": "Number of transactions in pending pool",
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "unit": "none"
         },
         "overrides": []
       },
@@ -420,11 +422,12 @@
       "yaxes": [
         {
           "$$hashKey": "object:38",
-          "format": "short",
+          "decimals": 0,
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
-          "min": null,
+          "min": "0",
           "show": true
         },
         {
@@ -476,5 +479,5 @@
   "timezone": "",
   "title": "Alephium Overview",
   "uid": "S3eJTo3Mk",
-  "version": 2
+  "version": 1
 }

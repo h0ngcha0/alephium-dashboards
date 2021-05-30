@@ -15,10 +15,37 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 9,
-  "iteration": 1622407532458,
+  "id": 11,
+  "iteration": 1622414582571,
   "links": [],
   "panels": [
+    {
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 39,
+      "options": {
+        "content": "<div class=\"dashboard-header text-center\">\n<span>General</span>\n</div>",
+        "mode": "html"
+      },
+      "pluginVersion": "7.1.0",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
     {
       "cacheTimeout": null,
       "colorBackground": false,
@@ -47,7 +74,7 @@
         "h": 5,
         "w": 5,
         "x": 0,
-        "y": 0
+        "y": 3
       },
       "hideTimeOverride": false,
       "id": 11,
@@ -150,7 +177,7 @@
         "h": 5,
         "w": 6,
         "x": 5,
-        "y": 0
+        "y": 3
       },
       "id": 4,
       "interval": null,
@@ -251,7 +278,7 @@
         "h": 5,
         "w": 6,
         "x": 11,
-        "y": 0
+        "y": 3
       },
       "id": 6,
       "interval": null,
@@ -288,67 +315,6 @@
       "type": "stat"
     },
     {
-      "datasource": "Prometheus",
-      "description": "Alephium Version",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {},
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 7,
-        "x": 17,
-        "y": 0
-      },
-      "id": 2,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "/^release_version$/",
-          "values": false
-        },
-        "textMode": "value"
-      },
-      "pluginVersion": "7.2.1",
-      "targets": [
-        {
-          "expr": "alephium_build_info{app=\"alephium\"}",
-          "format": "table",
-          "instant": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Alephium Version",
-      "type": "stat"
-    },
-    {
       "cacheTimeout": null,
       "colorBackground": false,
       "colorValue": false,
@@ -377,7 +343,7 @@
         "h": 3,
         "w": 7,
         "x": 17,
-        "y": 2
+        "y": 3
       },
       "id": 13,
       "interval": null,
@@ -440,6 +406,94 @@
       "valueName": "current"
     },
     {
+      "datasource": "Prometheus",
+      "description": "Alephium Version",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 7,
+        "x": 17,
+        "y": 6
+      },
+      "id": 2,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/^release_version$/",
+          "values": false
+        },
+        "textMode": "value"
+      },
+      "pluginVersion": "7.2.1",
+      "targets": [
+        {
+          "expr": "alephium_build_info{app=\"alephium\"}",
+          "format": "table",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Alephium Version",
+      "type": "stat"
+    },
+    {
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 8
+      },
+      "id": 37,
+      "options": {
+        "content": "<div class=\"dashboard-header text-center\">\n<span>Mempool</span>\n</div>",
+        "mode": "html"
+      },
+      "pluginVersion": "7.1.0",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
@@ -458,7 +512,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 5
+        "y": 11
       },
       "hiddenSeries": false,
       "id": 9,
@@ -557,7 +611,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 5
+        "y": 11
       },
       "hiddenSeries": false,
       "id": 15,
@@ -657,7 +711,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 13
+        "y": 19
       },
       "hiddenSeries": false,
       "id": 8,
@@ -757,7 +811,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 13
+        "y": 19
       },
       "hiddenSeries": false,
       "id": 17,
@@ -838,6 +892,33 @@
       }
     },
     {
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 27
+      },
+      "id": 41,
+      "options": {
+        "content": "<div class=\"dashboard-header text-center\">\n<span>Network</span>\n</div>",
+        "mode": "html"
+      },
+      "pluginVersion": "7.1.0",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
@@ -857,7 +938,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 21
+        "y": 30
       },
       "hiddenSeries": false,
       "id": 19,
@@ -954,7 +1035,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 21
+        "y": 30
       },
       "hiddenSeries": false,
       "id": 21,
@@ -1051,7 +1132,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 29
+        "y": 38
       },
       "hiddenSeries": false,
       "id": 23,
@@ -1148,7 +1229,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 29
+        "y": 38
       },
       "hiddenSeries": false,
       "id": 25,
@@ -1226,6 +1307,33 @@
       }
     },
     {
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 46
+      },
+      "id": 43,
+      "options": {
+        "content": "<div class=\"dashboard-header text-center\">\n<span>Chain Validation</span>\n</div>",
+        "mode": "html"
+      },
+      "pluginVersion": "7.1.0",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
@@ -1246,7 +1354,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 37
+        "y": 49
       },
       "hiddenSeries": false,
       "id": 27,
@@ -1346,7 +1454,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 37
+        "y": 49
       },
       "hiddenSeries": false,
       "id": 29,
@@ -1446,7 +1554,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 46
+        "y": 58
       },
       "hiddenSeries": false,
       "id": 31,
@@ -1530,108 +1638,6 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
-      "decimals": null,
-      "description": "Failed chain validation per second (Block and BlockHeader)",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {},
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 9,
-        "w": 12,
-        "x": 12,
-        "y": 46
-      },
-      "hiddenSeries": false,
-      "id": 33,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null as zero",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.2.1",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "expr": "sum(irate(alephium_chain_validation_failed{app=\"alephium\"}[1m])) by (validation_type, invalid_status)",
-          "interval": "",
-          "legendFormat": "{{validation_type}}",
-          "refId": "B"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Failed Validations Per Second",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:108",
-          "format": "none",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": "0",
-          "show": true
-        },
-        {
-          "$$hashKey": "object:109",
-          "decimals": null,
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
       "datasource": null,
       "description": "Validation time, both block validation and header validation. \n\n50 percentile, 90 percentil and 99 percentile",
       "fieldConfig": {
@@ -1646,8 +1652,8 @@
       "gridPos": {
         "h": 9,
         "w": 12,
-        "x": 0,
-        "y": 55
+        "x": 12,
+        "y": 58
       },
       "hiddenSeries": false,
       "id": 35,
@@ -1737,6 +1743,108 @@
         "align": false,
         "alignLevel": null
       }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Prometheus",
+      "decimals": null,
+      "description": "Failed chain validation per second (Block and BlockHeader)",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 67
+      },
+      "hiddenSeries": false,
+      "id": 33,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null as zero",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.2.1",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(irate(alephium_chain_validation_failed{app=\"alephium\"}[1m])) by (validation_type, invalid_status)",
+          "interval": "",
+          "legendFormat": "{{validation_type}}",
+          "refId": "B"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Failed Validations Per Second",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:108",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "$$hashKey": "object:109",
+          "decimals": null,
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     }
   ],
   "schemaVersion": 26,
@@ -1772,5 +1880,5 @@
   "timezone": "",
   "title": "Alephium Overview",
   "uid": "S3eJTo3Mk",
-  "version": 7
+  "version": 2
 }
